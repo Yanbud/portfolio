@@ -1,43 +1,50 @@
 :root {
     --main-color: #222;
-    --main-line: #666;
-    --main-bg: linear-gradient( rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6) 100%);
+    --sub-color: #666;
     --bg: #fff;
 }
 
 body {
     background-color: var(--bg);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+p {
+    font-size: 120%;
 }
 
 header,
-main,
-footer {
+main {
     margin: 2em auto 0;
     width: 80%;
+}
+
+.header,
+.about-me {
+    padding: 0 0 0 1em;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-}
-
-.header,
-.about-me {
-    padding: 0 2em;
+    border-bottom: 1px solid var(--sub-color);
 }
 
 .header h1 {
-    font-size: 30px;
+    font-size: 180%;
+    line-height: 50px;
+    font-family: monospace;
+    color: var(--main-color)
 }
 
 .header h1 span {
-    color: #555;
+    color: var(--sub-color)
 }
 
 .header nav {
     padding-top: 15px;
-    font-size: 20px;
+    padding-bottom: 15px;
 }
 
 .header nav ul {
@@ -47,57 +54,63 @@ footer {
 }
 
 .header nav ul li {
-    padding: 0 0 0 2em;
+    padding: 0.2em 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
 }
 
 a {
     text-decoration: none;
-    color: #222;
-}
-
-p {
-    font-size: 32px;
+    color: var(--main-color);
 }
 
 main {
-    padding-bottom: 10em;
+    padding-bottom: 6em;
 }
 
 .about-me {
-    margin-bottom: 25px;
+    margin-top: 5em;
+    margin-bottom: 5em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    color: var(--font);
 }
 
 .intro,
 .avatar {
     flex: 1 1 0;
+    text-align: center;
 }
 
 .intro {
-    margin-top: 2em;
+    margin: 1em 0;
 }
 
 .intro h2 {
-    font-size: 48px;
+    font-size: 300%;
     margin-bottom: 20px;
+    line-height: 60px;
+}
+
+.intro h2 span {
+    font-style: oblique;
+    margin-left: 1em;
 }
 
 .intro p {
     line-height: 1.5;
 }
 
-.avatar {
-    text-align: center;
-}
-
 .avatar img {
     width: 300px;
     height: 300px;
+    border-radius: 50%;
 }
 
 .contact-me {
-    margin-top: 2em;
+    padding-top: 2em;
+    margin-bottom: 2em;
 }
 
 .contact-me li {
@@ -111,8 +124,8 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    text-indent: -999px;
-    margin-right: 1em;
+    text-indent: -9999px;
+    margin: 0 0.5em;
 }
 
 .sm-github {
@@ -131,7 +144,7 @@ main {
     height: 80px;
     line-height: 80px;
     text-align: center;
-    font-size: 36px;
+    font-size: 150%;
     letter-spacing: 5px;
 }
 
@@ -152,7 +165,23 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #eee;
+}
+
+.work-card .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0.1;
+    transition: all 0.5s ease-in-out;
+    display: block;
+}
+
+.work-card:hover .mask {
+    background: rgba(0, 0, 0, .7);
+    opacity: 0.7;
 }
 
 .work-card a {
@@ -161,27 +190,17 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 0;
     background: rgba(0, 0, 0, 0.1);
-    content: "";
     opacity: 0.1;
-    transition: all 0.5s ease-in-out;
     display: block;
 }
 
-.work-card:hover a {
-    background: rgba(0, 0, 0, .7);
-    opacity: 0.7;
-}
-
 .work-card p {
-    color: var(--main-color);
     transition: all 0.5s ease-in-out;
     opacity: 0;
 }
 
 .card-header {
-    color: var(--main-color);
     font-size: 180%;
     transition: all 0.5s ease-in-out;
     opacity: 0;
@@ -227,15 +246,9 @@ main {
 }
 
 @media screen and (max-width:768px) {
-    .intro,
-    .work,
-    .header,
-    .header nav ul,
-    .about-me {
+    .about-me,
+    .projects {
         flex-direction: column;
-        text-align: center;
-    }
-    .avatar {
         text-align: center;
     }
     .card-one {
