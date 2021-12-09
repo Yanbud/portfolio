@@ -13,6 +13,14 @@ p {
     font-size: 130%;
 }
 
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+
+/* header, main layout */
+
 header,
 main {
     margin: 2em auto 0;
@@ -23,6 +31,9 @@ main {
 .about-me {
     padding: 0 0 0 1em;
 }
+
+
+/* header */
 
 .header {
     display: flex;
@@ -58,14 +69,12 @@ main {
     letter-spacing: 1px;
 }
 
-a {
-    text-decoration: none;
-    color: var(--main-color);
-}
-
 main {
     padding-bottom: 6em;
 }
+
+
+/* about-me */
 
 .about-me {
     margin-top: 5em;
@@ -109,6 +118,9 @@ main {
     border-radius: 50%;
 }
 
+
+/* contact-me */
+
 .contact-me {
     padding-top: 2em;
 }
@@ -139,6 +151,9 @@ main {
 .sm-email {
     background-image: url(../images/email.png);
 }
+
+
+/* work */
 
 .work h2 {
     height: 80px;
@@ -239,6 +254,9 @@ main {
 .card-five {
     background-image: url(../images/card-five.jpg);
 }
+
+
+/* responsive layout */
 
 @media screen and (max-width:992px) {
     .code-card {
