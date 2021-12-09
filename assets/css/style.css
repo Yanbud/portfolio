@@ -271,13 +271,13 @@ main {
         text-align: center;
     }
     .header nav a {
-        font-size: 120%;
+        font-size: 150%;
     }
     .card-one {
         flex: 1 0 400px;
     }
     p {
-        font-size: 180%
+        font-size: 180%;
     }
     .avatar {
         margin-top: 2em;
