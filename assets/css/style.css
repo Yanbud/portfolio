@@ -45,6 +45,7 @@ main {
     font-size: 180%;
     line-height: 50px;
     font-family: monospace;
+    letter-spacing: 4px;
     color: var(--main-color)
 }
 
@@ -67,6 +68,7 @@ main {
     padding: 0.2em 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 1px;
+    font-size: 120%;
 }
 
 main {
@@ -159,7 +161,7 @@ main {
     height: 80px;
     line-height: 80px;
     text-align: center;
-    font-size: 150%;
+    font-size: 200%;
     letter-spacing: 5px;
 }
 
@@ -234,6 +236,10 @@ main {
     transform: scale(103%);
 }
 
+.work-card:hover a {
+    opacity: 0;
+}
+
 .card-one {
     flex: 2 1 800px;
     background-image: url(../images/card-one.jpg);
@@ -269,9 +275,6 @@ main {
     .projects {
         flex-direction: column;
         text-align: center;
-    }
-    .header nav a {
-        font-size: 150%;
     }
     .card-one {
         flex: 1 0 400px;
