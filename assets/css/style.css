@@ -1,17 +1,16 @@
 :root {
     --main-color: #222;
     --sub-color: #666;
-    --bg: #fff;
+    --light: #fff;
 }
 
 body {
-    background-color: var(--bg);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--light);
     font-size: 16px;
 }
 
 p {
-    font-size: 120%;
+    font-size: 130%;
 }
 
 header,
@@ -100,6 +99,8 @@ main {
 
 .intro p {
     line-height: 1.5;
+    font-family: monospace;
+    color: var(--sub-color)
 }
 
 .avatar img {
@@ -110,7 +111,6 @@ main {
 
 .contact-me {
     padding-top: 2em;
-    margin-bottom: 2em;
 }
 
 .contact-me li {
@@ -174,7 +174,7 @@ main {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.1);
-    opacity: 0.1;
+    opacity: 0.5;
     transition: all 0.5s ease-in-out;
     display: block;
 }
@@ -191,20 +191,21 @@ main {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.1);
-    opacity: 0.1;
     display: block;
 }
 
 .work-card p {
     transition: all 0.5s ease-in-out;
-    opacity: 0;
+    opacity: 0.8;
+    color: var(--light)
 }
 
 .card-header {
     font-size: 180%;
     transition: all 0.5s ease-in-out;
-    opacity: 0;
+    opacity: 0.8;
     margin-bottom: 0.5em;
+    color: var(--light);
 }
 
 .work-card:hover .card-header,
@@ -251,7 +252,16 @@ main {
         flex-direction: column;
         text-align: center;
     }
+    .header nav a {
+        font-size: 120%;
+    }
     .card-one {
         flex: 1 0 400px;
+    }
+    p {
+        font-size: 180%
+    }
+    .avatar {
+        margin-top: 2em;
     }
 }
