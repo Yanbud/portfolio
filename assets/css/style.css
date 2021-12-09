@@ -97,7 +97,7 @@ main {
 
 .intro h2 {
     font-size: 300%;
-    margin-bottom: 20px;
+    margin-bottom: 0.5em;
     line-height: 60px;
 }
 
@@ -122,7 +122,7 @@ main {
 /* contact-me */
 
 .contact-me {
-    padding-top: 2em;
+    padding-top: 3em;
 }
 
 .contact-me li {
