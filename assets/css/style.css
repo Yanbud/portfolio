@@ -45,7 +45,6 @@ main {
     font-size: 180%;
     line-height: 50px;
     font-family: monospace;
-    letter-spacing: 4px;
     color: var(--main-color)
 }
 
@@ -68,7 +67,6 @@ main {
     padding: 0.2em 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 1px;
-    font-size: 120%;
 }
 
 main {
