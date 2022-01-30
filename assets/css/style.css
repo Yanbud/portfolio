@@ -1,296 +1,274 @@
-:root {
-    --main-color: #222;
-    --sub-color: #666;
-    --light: #fff;
-}
-
-body {
-    background-color: var(--light);
-    font-size: 16px;
-}
-
-p {
-    font-size: 130%;
-}
-
-a {
-    text-decoration: none;
-    color: var(--main-color);
-}
-
-
-/* header, main layout */
-
-header,
-main {
-    margin: 2em auto 0;
-    width: 80%;
-}
-
-
-/* header */
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--sub-color);
-}
-
-.header h1 {
-    font-size: 180%;
-    line-height: 50px;
-    font-family: monospace;
-    color: var(--main-color);
-    margin: 0 0.5em;
-}
-
-.header h1 span {
-    color: var(--sub-color)
-}
-
-.header nav {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.header nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-.header nav ul li {
-    padding: 0.2em 1em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    letter-spacing: 1px;
-}
-
-main {
-    padding-bottom: 6em;
-}
-
-
-/* about-me */
-
-.about-me {
-    margin-top: 5em;
-    margin-bottom: 5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--font);
-}
-
-.intro,
-.avatar {
-    flex: 1 1 0;
-    text-align: center;
-}
-
-.intro {
-    margin: 1em 1em 1em 4em;
-}
-
-.intro h2 {
-    font-size: 300%;
-    margin-bottom: 0.5em;
-    line-height: 60px;
-}
-
-.intro h2 span {
-    font-style: oblique;
-    margin-left: 1em;
-}
-
-.intro p {
-    line-height: 1.5;
-    font-family: monospace;
-    color: var(--sub-color)
-}
-
-.avatar img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-}
-
-
-/* contact-me */
-
-.contact-me {
-    padding-top: 3em;
-}
-
-.contact-me li {
-    display: inline-block;
-}
-
-.contact-me li a {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    text-indent: -9999px;
-    margin: 0 0.5em;
-}
-
-.sm-github {
-    background-image: url(../images/github.png);
-}
-
-.sm-linkedin {
-    background-image: url(../images/linkedin.png);
-}
-
-.sm-email {
-    background-image: url(../images/email.png);
-}
-
-
-/* work */
-
-.work h2 {
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-    font-size: 200%;
-    letter-spacing: 5px;
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.work-card {
-    flex: 1 0 400px;
-    margin: 1em 1em 2em;
-    transition: all 0.5s ease-in-out;
-    height: 300px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.work-card .mask {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.1);
-    opacity: 0.5;
-    transition: all 0.5s ease-in-out;
-    display: block;
-}
-
-.work-card:hover .mask {
-    background: rgba(0, 0, 0, .7);
-    opacity: 0.7;
-}
-
-.work-card a {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.1);
-    display: block;
-}
-
-.work-card p {
-    transition: all 0.5s ease-in-out;
-    opacity: 0.8;
-    color: var(--light)
-}
-
-.card-header {
-    font-size: 180%;
-    transition: all 0.5s ease-in-out;
-    opacity: 0.8;
-    margin-bottom: 0.5em;
-    color: var(--light);
-}
-
-.work-card:hover .card-header,
-.work-card:hover p {
-    color: #fff;
-    transform: scale(110%);
-    opacity: 1.0;
-}
-
-.work-card:hover {
-    transform: scale(103%);
-}
-
-.work-card:hover a {
-    opacity: 0;
-}
-
-.card-one {
-    flex: 2 1 800px;
-    background-image: url(../images/card-one.jpg);
-}
-
-.card-two {
-    background-image: url(../images/card-two.jpg);
-}
-
-.card-three {
-    background-image: url(../images/card-three.jpg);
-}
-
-.card-four {
-    background-image: url(../images/card-four.jpg);
-}
-
-.card-five {
-    background-image: url(../images/card-five.jpg);
-}
-
-
-/* responsive layout */
-
-@media screen and (max-width:992px) {
-    .code-card {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .about-me,
-    .projects,
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-    .header nav ul .header nav ul li {
-        width: 25%;
-        margin: 0
-    }
-    .header h1 {
-        margin-bottom: 1em;
-    }
-    .card-one {
-        flex: 1 0 400px;
-    }
-    p {
-        font-size: 180%;
-    }
-    .intro {
-        margin-left: 0;
-        order: 1
-    }
-    .avatar {
-        order: 0;
-        margin-bottom: 2em;
-        ;
-    }
-}
+                         :root {
+                            --main-color: #222;
+                            --sub-color: #999;
+                            --light: #fff;
+                        }
+                        
+                        body {
+                            background-color: var(--light);
+                            font-size: 16px;
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+                        }
+                        
+                        p {
+                            font-size: 130%;
+                        }
+                        
+                        a {
+                            text-decoration: none;
+                            color: peru;
+                        }
+                        /* header, main layout */
+                        
+                        header,
+                        main {
+                            margin: 2em auto 0;
+                            width: 80%;
+                        }
+                        /* header */
+                        
+                        .header {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                        
+                        .header h1 {
+                            font-size: 180%;
+                            line-height: 50px;
+                            color: var(--main-color);
+                            padding: 0 0.5em;
+                        }
+                        
+                        .header h1 span {
+                            color: var(--sub-color)
+                        }
+                        
+                        .header nav {
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                        }
+                        
+                        .header nav ul {
+                            list-style-type: none;
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                        
+                        .header nav ul li {
+                            padding: 0.2em 1em;
+                            letter-spacing: 1px;
+                        }
+                        
+                        main {
+                            padding-bottom: 6em;
+                        }
+                        /* about-me */
+                        
+                        .about-me {
+                            margin-top: 5em;
+                            margin-bottom: 5em;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            color: var(--font);
+                        }
+                        
+                        .intro,
+                        .avatar {
+                            flex: 1 1 0;
+                            text-align: center;
+                        }
+                        
+                        .intro {
+                            margin: 1em 1em 1em 4em;
+                        }
+                        
+                        .intro h2 {
+                            font-size: 300%;
+                            margin-bottom: 0.5em;
+                            line-height: 60px;
+                            color: peru;
+                            font-weight: 100;
+                        }
+                        
+                        .intro p {
+                            line-height: 1.5;
+                            color: var(--sub-color)
+                        }
+                        
+                        .avatar img {
+                            width: 300px;
+                            height: 300px;
+                            border-radius: 50%;
+                        }
+                        /* contact-me */
+                        
+                        .contact-me {
+                            padding-top: 3em;
+                        }
+                        
+                        .contact-me li {
+                            display: inline-block;
+                        }
+                        
+                        .contact-me li a {
+                            display: inline-block;
+                            width: 24px;
+                            height: 24px;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            text-indent: -9999px;
+                            margin: 0 0.5em;
+                            opacity: 0.5;
+                        }
+                        
+                        .sm-github {
+                            background-image: url(../images/github.png);
+                        }
+                        
+                        .sm-linkedin {
+                            background-image: url(../images/linkedin.png);
+                        }
+                        
+                        .sm-email {
+                            background-image: url(../images/email.png);
+                        }
+                        /* work */
+                        
+                        .work h2 {
+                            line-height: 80px;
+                            text-align: center;
+                            font-size: 200%;
+                            color: peru;
+                            font-weight: 100;
+                        }
+                        
+                        .projects {
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+                        
+                        .work-card {
+                            flex: 1 0 400px;
+                            margin: 1em 1em 2em;
+                            transition: all 0.5s ease-in-out;
+                            height: 300px;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                        }
+                        
+                        .work-card .mask {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            background: rgba(0, 0, 0, 0.1);
+                            opacity: 0.5;
+                            transition: all 0.5s ease-in-out;
+                            display: block;
+                        }
+                        
+                        .work-card:hover .mask {
+                            background: rgba(0, 0, 0, .7);
+                            opacity: 0.7;
+                        }
+                        
+                        .work-card a {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            background: rgba(0, 0, 0, 0.1);
+                            display: block;
+                        }
+                        
+                        .work-card p {
+                            transition: all 0.5s ease-in-out;
+                            opacity: 0.8;
+                            color: var(--light)
+                        }
+                        
+                        .card-header {
+                            font-size: 180%;
+                            transition: all 0.5s ease-in-out;
+                            opacity: 0.8;
+                            margin-bottom: 0.5em;
+                            color: var(--light);
+                        }
+                        
+                        .work-card:hover .card-header,
+                        .work-card:hover p {
+                            color: #fff;
+                            transform: scale(110%);
+                            opacity: 1.0;
+                        }
+                        
+                        .work-card:hover {
+                            transform: scale(103%);
+                        }
+                        
+                        .work-card:hover a {
+                            opacity: 0;
+                        }
+                        
+                        .card-one {
+                            flex: 2 1 800px;
+                            background-image: url(../images/card-one.jpg);
+                        }
+                        
+                        .card-two {
+                            background-image: url(../images/card-two.jpg);
+                        }
+                        
+                        .card-three {
+                            background-image: url(../images/card-three.jpg);
+                        }
+                        
+                        .card-four {
+                            background-image: url(../images/card-four.jpg);
+                        }
+                        
+                        .card-five {
+                            background-image: url(../images/card-five.jpg);
+                        }
+                        /* responsive layout */
+                        
+                        @media screen and (max-width:992px) {
+                            .code-card {
+                                width: 50%;
+                            }
+                        }
+                        
+                        @media screen and (max-width:768px) {
+                            .about-me,
+                            .projects {
+                                flex-direction: column;
+                                text-align: center;
+                            }
+                            .header h1 {
+                                margin-bottom: 1em;
+                            }
+                            .card-one {
+                                flex: 1 0 400px;
+                            }
+                            p {
+                                font-size: 180%;
+                            }
+                            .intro {
+                                margin-left: 0;
+                                order: 1
+                            }
+                            .avatar {
+                                order: 0;
+                                margin-bottom: 2em;
+                                ;
+                            }
+                        }
