@@ -60,13 +60,14 @@
                     <div class="mask"></div>
                     <h3 class="card-header">Film-Bites!</h3>
                     <p>Project 1 - Server APIs</p>
-                    <a href="https://mbarrientos1129.github.io/mighty-mustangs-Project-1-Group/" target="_blank"></a>
+                    <a href="#" onclick="display1()"></a>
+
                 </section>
                 <section class="work-card card-two">
                     <div class="mask"></div>
                     <h3 class="card-header">Weather Dashboard</h3>
                     <p>Weather API</p>
-                    <a href="https://yanbud.github.io/weather-dashboard/" target="_blank"></a>
+                    <a href="#" onclick="display2()"></a>
                 </section>
                 <section class="work-card card-three">
                     <div class="mask"></div>
@@ -89,6 +90,52 @@
             </div>
         </div>
     </main>
+
+    <div class="modal" id="modal1" style="display:none;">
+        <div class="content">
+            <header class="header">
+                <h1>Film-Bites!</h1><button class="close" id='#close1' onclick="closeMod1()">X</button>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/mbarrientos1129/mighty-mustangs-Project-1-Group">Repo</a>
+                        </li>
+                        <li>
+                            <a href="https://mbarrientos1129.github.io/mighty-mustangs-Project-1-Group/">Deployed</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <img src="./assets/images/ss-film-bites.png">
+            </main>
+
+        </div>
+    </div>
+    <div class="modal" id="modal2" style="display:none;">
+        <div class="content">
+            <header class="header">
+                <h1>Weather Dashboard</h1><button class="close" id='#close2' onclick="closeMod2()">X</button>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Yanbud/weather-dashboard">Repo</a>
+                        </li>
+                        <li>
+                            <a href="https://yanbud.github.io/weather-dashboard/">Deployed</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <img src="./assets/images/ss-weather.png">
+            </main>
+
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
