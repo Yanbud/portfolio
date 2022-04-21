@@ -83,9 +83,7 @@ main {
     color: peru;
 }
 
-main {
-    padding-bottom: 3em;
-}
+
 
 footer {
     text-align: center;
@@ -142,9 +140,11 @@ footer {
 }
 
 .avatar img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
+    box-shadow: 5px 5px 5px rgb(255, 255, 255);
+    border: 1px solid #fff;
 }
 
 
@@ -303,6 +303,11 @@ h2 {
     .code-card {
         width: 50%;
     }
+
+    main {
+        width: 98%;
+    }
+
 }
 
 @media screen and (max-width:768px) {
@@ -342,8 +347,10 @@ h2 {
 
     main {
         margin: 0 auto 0;
-        width: 95%;
+        width: 98%
     }
+
+
 }
 
 
@@ -369,8 +376,11 @@ h2 {
 
 .content header {
     background: var(--light);
-    width: 1000px;
-    margin-top: 10px;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    text-align: center;
 }
 
 .content header h1 {
@@ -389,33 +399,25 @@ h2 {
 }
 
 .content img {
-    width: 1000px;
+    width: 100%;
     height: auto;
     box-shadow: 0px 10px 10px rgba(100, 100, 100, 0.3);
+    max-width: 1000px;
 }
 
 .close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 150%;
-    border: none;
-    color: var(--sub-color);
     cursor: pointer;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: #ccc;
-    color: #fff;
-    border-radius: 6px;
-    width: 30px;
+    color: peru;
+    width: 140px;
+    height: 40px;
+    border: none;
+    align-self: center;
+    display: inline-block;
 }
 
-.refer {
-    text-align: right;
-    margin-top: 1em;
-}
 
 .refer li {
-    margin-top: 1.5em;
     display: inline-block;
 }
 
@@ -428,5 +430,5 @@ h2 {
     padding: 2px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 10px;
+    margin: 0 0.5rem;
 }
