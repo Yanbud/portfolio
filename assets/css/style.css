@@ -386,6 +386,10 @@ h2 {
 /* responsive layout */
 
 @media screen and (max-width:992px) {
+    body {
+        font-size: 200%;
+    }
+
     .code-card {
         width: 50%;
     }
@@ -443,6 +447,9 @@ h2 {
 }
 
 @media screen and (max-width:768px) {
+    body {
+        font-size: 200%;
+    }
 
     .about-me,
     .projects {
