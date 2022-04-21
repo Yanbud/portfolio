@@ -391,15 +391,42 @@ h2 {
 .content img {
     width: 1000px;
     height: auto;
-    box-shadow: 10px 10px 10px rgba(100, 100, 100, .1);
+    box-shadow: 0px 10px 10px rgba(100, 100, 100, 0.3);
 }
 
 .close {
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 20px;
-    font-size: 40px;
+    font-size: 150%;
     border: none;
     color: var(--sub-color);
     cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #ccc;
+    color: #fff;
+    border-radius: 6px;
+    width: 30px;
+}
+
+.refer {
+    text-align: right;
+    margin-top: 1em;
+}
+
+.refer li {
+    margin-top: 1.5em;
+    display: inline-block;
+}
+
+.refer li a {
+    display: inline-block;
+    background: peru;
+    color: #fff;
+    border-radius: 6px;
+    width: 60px;
+    padding: 2px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
 }
