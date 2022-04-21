@@ -22,6 +22,7 @@ a {
     text-decoration: none;
     color: peru;
     transition: all 0.5s ease-in-out;
+    font-size: 110%;
 }
 
 a:hover {
@@ -259,6 +260,10 @@ h2 {
     color: var(--light);
 }
 
+.work {
+    padding: 2rem 0 0 0;
+}
+
 .work-card:hover .card-header,
 .work-card:hover p {
     color: #fff;
@@ -296,62 +301,6 @@ h2 {
 }
 
 
-
-/* responsive layout */
-
-@media screen and (max-width:992px) {
-    .code-card {
-        width: 50%;
-    }
-
-    main {
-        width: 98%;
-    }
-
-}
-
-@media screen and (max-width:768px) {
-
-    .about-me,
-    .projects {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .card-one {
-        flex: 1 0 400px;
-    }
-
-    p {
-        font-size: 180%;
-    }
-
-    .intro {
-        margin-left: 0;
-        order: 1
-    }
-
-    .header nav ul li a {
-        font-size: 120%;
-    }
-
-    .work-card {
-        font-size: 150%;
-    }
-
-    .avatar {
-        order: 0;
-        margin-bottom: 2em;
-        ;
-    }
-
-    main {
-        margin: 0 auto 0;
-        width: 98%
-    }
-
-
-}
 
 
 /* modal */
@@ -431,4 +380,80 @@ h2 {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0 0.5rem;
+}
+
+
+/* responsive layout */
+
+@media screen and (max-width:992px) {
+    .code-card {
+        width: 50%;
+    }
+
+    main {
+        width: 98%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .about-me,
+    .projects {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-one {
+        flex: 1 0 400px;
+    }
+
+    p {
+        font-size: 180%;
+    }
+
+    .intro {
+        margin-left: 0;
+        order: 1
+    }
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header nav ul,
+    .header nav ul li {
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .header nav ul li a {
+        font-size: 150%;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .header h1 {
+        align-self: center;
+        margin-top: 1rem;
+    }
+
+    .work-card {
+        font-size: 150%;
+    }
+
+    .avatar {
+        order: 0;
+        margin-bottom: 2em;
+        ;
+    }
+
+    main {
+        margin: 0 auto 0;
+        width: 98%
+    }
+
+
 }
