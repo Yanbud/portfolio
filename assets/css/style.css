@@ -151,7 +151,7 @@ footer {
 /* contact-me */
 
 .contact-me {
-    padding-top: 3em;
+    padding: 1em 0 2em;
 }
 
 .contact-me li {
@@ -189,7 +189,7 @@ footer {
 
 /* work */
 
-.work h2 {
+h2 {
     line-height: 80px;
     text-align: center;
     font-size: 250%;
