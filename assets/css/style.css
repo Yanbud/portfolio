@@ -94,7 +94,7 @@ footer {
 }
 
 .copy-right {
-    padding: 3em;
+    padding: 1rem 0 3rem 0;
 
 }
 
@@ -176,10 +176,6 @@ footer {
 
 .contact-me li a:hover {
     opacity: 0.7;
-}
-
-.contact-me li span {
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .sm-github {
